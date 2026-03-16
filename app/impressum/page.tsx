@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Impressum – Ratinga",
+  title: "Impressum – Ratinga AI",
 };
 
 export default function Impressum() {
@@ -24,7 +24,7 @@ export default function Impressum() {
             Angaben gemäß § 5 TMG
           </h2>
           <p className="text-gray-700 leading-relaxed">
-            Ratinga<br />
+            Ratinga AI<br />
             Jens Gildehaus<br />
             Schleiferstr. 6<br />
             40878 Ratingen

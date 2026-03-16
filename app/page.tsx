@@ -137,9 +137,9 @@ export default function Home() {
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
         <div className="max-w-5xl mx-auto px-6 h-20 flex items-center justify-between">
           <Image
-            src="/logo.png"
-            alt="Ratinga"
-            width={300}
+            src="/ratinga_ai_freigestellt_gross.png"
+            alt="Ratinga AI"
+            width={320}
             height={80}
             className="h-16 w-auto"
             priority

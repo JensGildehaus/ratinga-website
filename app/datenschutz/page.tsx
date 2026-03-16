@@ -24,7 +24,7 @@ export default function Datenschutz() {
             1. Verantwortlicher
           </h2>
           <p className="text-gray-700 leading-relaxed text-sm">
-            Ratinga · Jens Gildehaus<br />
+            Ratinga AI · Jens Gildehaus<br />
             Schleiferstr. 6, 40878 Ratingen<br />
             E-Mail:{" "}
             <a href="mailto:kontakt@ratinga.de" className="text-[#1B58A8] hover:underline">

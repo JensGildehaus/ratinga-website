@@ -11,10 +11,10 @@ interface MeshGradientBgProps {
 }
 
 export function MeshGradientBg({
-  colors = ["#ffffff", "#f0f4ff", "#fff0f0", "#f5f5f7", "#e8f0ff", "#fff5f5"],
-  distortion = 0.25,
-  swirl = 0.3,
-  speed = 0.25,
+  colors = ["#f8f8ff", "#ffe8e8", "#e8eeff", "#fff0f0", "#eef2ff", "#fff8f8"],
+  distortion = 0.35,
+  swirl = 0.4,
+  speed = 0.3,
 }: MeshGradientBgProps) {
   const [dimensions, setDimensions] = useState({ width: 1920, height: 1080 });
   const [mounted, setMounted] = useState(false);
@@ -44,7 +44,7 @@ export function MeshGradientBg({
         offsetX={0}
       />
       {/* Veil to keep text readable */}
-      <div className="absolute inset-0 pointer-events-none bg-white/50" />
+      <div className="absolute inset-0 pointer-events-none bg-white/35" />
     </>
   );
 }
