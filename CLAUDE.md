@@ -7,7 +7,7 @@
 > Skills: landing-page-guide-v2 · phase-3-mockup · frontend-design · ui-ux-pro-max · legal-impressum · seo-audit
 
 ## Ziel der Website
-Corporate/Brand-Seite für **Ratinga AI** — die Firma hinter Ablesewilli und künftigen Produkten.
+Corporate/Brand-Seite für **Ratinga AI** (offizieller Name: Ratinga AI) — die Firma hinter Ablesewilli und künftigen Produkten.
 
 **Zielgruppe:**
 1. Neugierige die Ablesewilli entdeckt haben → kurz erklären wer/was Ratinga ist, Vertrauen aufbauen, weiterleiten

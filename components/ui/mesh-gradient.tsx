@@ -11,9 +11,9 @@ interface MeshGradientBgProps {
 }
 
 export function MeshGradientBg({
-  colors = ["#f8f8ff", "#ffe8e8", "#e8eeff", "#fff0f0", "#eef2ff", "#fff8f8"],
-  distortion = 0.35,
-  swirl = 0.4,
+  colors = ["#fde8e8", "#dde8ff", "#ffeedd", "#e8f0ff", "#ffe0e0", "#eef4ff"],
+  distortion = 0.5,
+  swirl = 0.5,
   speed = 0.3,
 }: MeshGradientBgProps) {
   const [dimensions, setDimensions] = useState({ width: 1920, height: 1080 });
@@ -43,8 +43,8 @@ export function MeshGradientBg({
         speed={speed}
         offsetX={0}
       />
-      {/* Veil to keep text readable */}
-      <div className="absolute inset-0 pointer-events-none bg-white/35" />
+      {/* Leichter Schleier damit Text gut lesbar bleibt */}
+      <div className="absolute inset-0 pointer-events-none bg-white/20" />
     </>
   );
 }

@@ -135,13 +135,13 @@ export default function Home() {
 
       {/* ── NAV ─────────────────────────────────────────────────────────── */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
-        <div className="max-w-5xl mx-auto px-6 h-20 flex items-center justify-between">
+        <div className="max-w-5xl mx-auto px-6 h-24 flex items-center justify-between">
           <Image
             src="/ratinga_ai_freigestellt_gross.png"
             alt="Ratinga AI"
-            width={320}
-            height={80}
-            className="h-16 w-auto"
+            width={400}
+            height={100}
+            className="h-20 w-auto"
             priority
           />
           <nav className="hidden sm:flex items-center gap-8 text-sm font-medium text-gray-500">
@@ -156,7 +156,7 @@ export default function Home() {
       <main>
 
         {/* ── HERO ────────────────────────────────────────────────────────── */}
-        <section className="relative pt-48 pb-24 px-6 overflow-hidden">
+        <section className="relative pt-52 pb-28 px-6 overflow-hidden">
           <div className="absolute inset-0">
             <MeshGradientBg />
           </div>
@@ -189,7 +189,7 @@ export default function Home() {
               transition={{ duration: 0.7, delay: 0.28, ease: [0.25, 0.1, 0.25, 1] }}
             >
               <a
-                href="#projekte"
+                href="#showcase"
                 className="inline-flex items-center gap-2 bg-[#0a0a0a] text-white px-8 py-4 rounded-full text-sm font-semibold hover:bg-[#D12B2B] transition-colors duration-300"
               >
                 Projekte entdecken <span className="text-base">↓</span>
@@ -216,7 +216,7 @@ export default function Home() {
         </section>
 
         {/* ── PRODUCT SHOWCASE ────────────────────────────────────────────── */}
-        <section className="py-24 px-6 bg-[#F5F5F7] overflow-hidden">
+        <section id="showcase" className="py-24 px-6 bg-[#F5F5F7] overflow-hidden">
           <div className="max-w-4xl mx-auto">
             <div className="flex flex-col md:flex-row items-center gap-16">
               <FadeUp className="flex-1">
@@ -288,46 +288,6 @@ export default function Home() {
                   {/* Glow */}
                   <div className="absolute -inset-4 bg-[#1B58A8]/10 rounded-[60px] blur-2xl -z-10" />
                 </motion.div>
-              </FadeUp>
-            </div>
-          </div>
-        </section>
-
-        {/* ── PROJEKTE ────────────────────────────────────────────────────── */}
-        <section id="projekte" className="py-24 px-6 bg-[#F5F5F7]">
-          <div className="max-w-4xl mx-auto">
-            <FadeUp>
-              <h2 className="text-3xl font-bold tracking-tight mb-3">Was bisher entstanden ist</h2>
-              <p className="text-gray-500 mb-12">Wenige Projekte. Dafür mit Haltung.</p>
-            </FadeUp>
-            <div className="grid md:grid-cols-2 gap-6">
-              <FadeUp delay={0.1}>
-                <a
-                  href="https://ablesewilli.de"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex flex-col h-full p-8 bg-white rounded-2xl border border-gray-100 hover:border-[#1B58A8]/30 hover:shadow-md transition-all duration-300 group"
-                >
-                  <div className="text-3xl mb-5">🔌</div>
-                  <h3 className="text-xl font-bold mb-2 group-hover:text-[#1B58A8] transition-colors">
-                    Ablese-Willi
-                  </h3>
-                  <p className="text-gray-500 leading-relaxed text-sm flex-1 mb-6">
-                    Zählerstände für Strom, Gas & Wasser – einfach erfassen,
-                    kostenlos, werbefrei, DSGVO-konform.
-                  </p>
-                  <span className="text-sm text-[#1B58A8] font-semibold group-hover:underline">
-                    ablesewilli.de →
-                  </span>
-                </a>
-              </FadeUp>
-              <FadeUp delay={0.2}>
-                <div className="flex flex-col h-full p-8 bg-white rounded-2xl border border-dashed border-gray-200 opacity-60">
-                  <div className="text-3xl mb-5">⚙️</div>
-                  <h3 className="text-xl font-bold mb-2 text-gray-400">Nächstes Projekt</h3>
-                  <p className="text-gray-400 leading-relaxed text-sm flex-1 mb-6">In Arbeit. Wird gut.</p>
-                  <span className="text-sm text-gray-300 font-semibold">Coming soon</span>
-                </div>
               </FadeUp>
             </div>
           </div>
@@ -504,32 +464,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ── FINAL CTA ───────────────────────────────────────────────────── */}
-        <section className="py-32 px-6 bg-[#0a0a0a] text-white">
-          <div className="max-w-4xl mx-auto text-center">
-            <FadeUp>
-              <h2
-                className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6"
-                style={{ fontFamily: "var(--font-jakarta)" }}
-              >
-                Neugierig geworden?
-              </h2>
-              <p className="text-gray-400 text-xl mb-10 max-w-xl mx-auto leading-relaxed">
-                Schreib mir — oder schau dir Ablesewilli an. Kostenlos, werbefrei, DSGVO-konform.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <a
-                  href="https://ablesewilli.de"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-[#D12B2B] text-white px-8 py-4 rounded-full text-sm font-semibold hover:bg-red-700 transition-colors duration-300"
-                >
-                  Ablesewilli testen →
-                </a>
-              </div>
-            </FadeUp>
-          </div>
-        </section>
 
       </main>
 
