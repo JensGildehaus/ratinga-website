@@ -11,7 +11,7 @@ export default function Datenschutz() {
       <header className="border-b border-gray-100">
         <div className="max-w-4xl mx-auto px-6 h-16 flex items-center">
           <Link href="/" className="text-sm text-gray-500 hover:text-[#0a0a0a] transition-colors">
-            ← Zurück
+            ← Zurück zur Startseite
           </Link>
         </div>
       </header>
