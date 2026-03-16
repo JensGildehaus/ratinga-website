@@ -95,7 +95,6 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
 
 const navLinks = [
   { href: "#showcase", label: "Projekte" },
-  { href: "#stack", label: "Stack" },
   { href: "#about", label: "Über mich" },
   { href: "#kontakt", label: "Kontakt" },
 ];
@@ -307,10 +306,23 @@ export default function Home() {
                   href="https://ablesewilli.de"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-sm font-semibold text-[#1B58A8] hover:underline"
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-[#1B58A8] hover:underline mb-8 block"
                 >
                   ablesewilli.de →
                 </a>
+                {/* Stack */}
+                <div className="overflow-hidden rounded-xl border border-gray-200">
+                  <table className="w-full text-xs">
+                    <tbody>
+                      {stackRows.map((row, i) => (
+                        <tr key={i} className={i % 2 === 0 ? "bg-white" : "bg-[#F5F5F7]"}>
+                          <td className="px-4 py-3 font-semibold text-gray-400 w-28 whitespace-nowrap">{row.label}</td>
+                          <td className="px-4 py-3 text-[#0a0a0a]">{row.value}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
               </FadeUp>
 
               {/* Phone mockup */}
@@ -365,37 +377,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ── STACK ───────────────────────────────────────────────────────── */}
-        <section id="stack" className="py-24 px-6">
-          <div className="max-w-4xl mx-auto">
-            <FadeUp>
-              <h2 className="text-3xl font-bold tracking-tight mb-3">Stack & Philosophie</h2>
-              <p className="text-gray-500 mb-12 text-lg">
-                Moderner, schlanker Tech-Stack – KI nicht als Buzzword, sondern als echtes Werkzeug.
-              </p>
-            </FadeUp>
-            <FadeUp delay={0.1}>
-              <div className="overflow-hidden rounded-2xl border border-gray-100">
-                <table className="w-full text-sm">
-                  <tbody>
-                    {stackRows.map((row, i) => (
-                      <tr key={i} className={i % 2 === 0 ? "bg-white" : "bg-[#F5F5F7]"}>
-                        <td className="px-6 py-4 font-semibold text-gray-400 w-36 whitespace-nowrap">{row.label}</td>
-                        <td className="px-6 py-4 text-[#0a0a0a]">{row.value}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </FadeUp>
-            <FadeUp delay={0.2}>
-              <p className="mt-8 text-xl font-bold text-[#D12B2B]">
-                Philosophie: Einfach. Schnell. Kein Overengineering.
-              </p>
-            </FadeUp>
-          </div>
-        </section>
-
         {/* ── ABOUT ───────────────────────────────────────────────────────── */}
         <section id="about" className="py-24 px-6 bg-[#F5F5F7]">
           <div className="max-w-4xl mx-auto">
@@ -429,6 +410,7 @@ export default function Home() {
                     Kollaboration mit Gleichgesinnten – auf die Beine stellen?
                   </p>
                   <p className="text-[#0a0a0a] font-bold">Spoiler: Ziemlich viel.</p>
+                <p className="text-[#D12B2B] font-bold pt-2">Philosophie: Einfach. Schnell. Kein Overengineering.</p>
                 </div>
               </div>
             </FadeUp>
