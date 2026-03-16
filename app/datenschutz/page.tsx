@@ -40,8 +40,7 @@ export default function Datenschutz() {
             2. Hosting
           </h2>
           <p className="text-gray-600 leading-relaxed text-sm">
-            Diese Website wird bei <strong className="text-[#0a0a0a]">Vercel Inc.</strong> (440 N Barranca Ave #4133,
-            Covina, CA 91723, USA) gehostet. Vercel verarbeitet beim Aufruf der Website automatisch
+            Diese Website wird bei <strong className="text-[#0a0a0a]">Vercel Inc.</strong> (USA) gehostet. Vercel verarbeitet beim Aufruf der Website automatisch
             Verbindungsdaten (IP-Adresse, Browser, Zeitstempel). Die Datenübertragung erfolgt auf Basis der
             EU-Standardvertragsklauseln. Weitere Informationen:{" "}
             <a
@@ -65,8 +64,7 @@ export default function Datenschutz() {
             an Dritte weitergegeben.
             <br />
             <br />
-            Der Versand erfolgt über <strong className="text-[#0a0a0a]">Resend</strong> (Resend Inc., 2261 Market
-            Street #5039, San Francisco, CA 94114, USA). Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO
+            Der Versand erfolgt über <strong className="text-[#0a0a0a]">Resend</strong> (Resend Inc., USA). Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO
             (Vertragsanbahnung / berechtigtes Interesse). Die Daten werden nach Abschluss der Kommunikation
             gelöscht, sofern keine gesetzliche Aufbewahrungspflicht besteht.
           </p>
