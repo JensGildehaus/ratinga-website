@@ -46,6 +46,15 @@ export default function Impressum() {
 
         <section>
           <h2 className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-3">
+            Steuerliche Angaben
+          </h2>
+          <p className="text-gray-700 leading-relaxed">
+            Steuernummer: beantragt
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-3">
             Haftung für Inhalte
           </h2>
           <p className="text-gray-600 leading-relaxed text-sm">
