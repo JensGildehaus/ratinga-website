@@ -14,18 +14,25 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Ratinga — Einfache Tools. Echte Wirkung.",
+  metadataBase: new URL("https://ratinga.de"),
+  title: "Ratinga AI — built with AI. made to work.",
   description:
-    "Ratinga baut Web-Apps, Automations und Open-Source-Projekte – modern, schlank und mit KI im Gepäck.",
-  keywords: ["Ratinga", "Web-Apps", "Tools", "Next.js", "Ablesewilli", "KI", "Open Source"],
+    "Ratinga AI baut Web-Apps, Automations und Open-Source-Projekte – modern, schlank und mit KI im Gepäck.",
+  keywords: ["Ratinga AI", "Web-Apps", "Tools", "Next.js", "ablesewilli", "KI", "Open Source"],
   openGraph: {
-    title: "Ratinga — Einfache Tools. Echte Wirkung.",
+    title: "Ratinga AI — built with AI. made to work.",
     description:
-      "Ratinga baut Web-Apps, Automations und Open-Source-Projekte – modern, schlank und mit KI im Gepäck.",
+      "Ratinga AI baut Web-Apps, Automations und Open-Source-Projekte – modern, schlank und mit KI im Gepäck.",
     url: "https://ratinga.de",
-    siteName: "Ratinga",
+    siteName: "Ratinga AI",
     locale: "de_DE",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ratinga AI — built with AI. made to work.",
+    description:
+      "Ratinga AI baut Web-Apps, Automations und Open-Source-Projekte – modern, schlank und mit KI im Gepäck.",
   },
 };
 
