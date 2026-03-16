@@ -328,22 +328,33 @@ export default function Home() {
               <h2 className="text-3xl font-bold tracking-tight mb-10">Über Ratinga AI</h2>
             </FadeUp>
             <FadeUp delay={0.1}>
-              <div className="max-w-2xl space-y-5 text-gray-600 text-lg leading-relaxed">
-                <p>
-                  Hinter Ratinga AI stecke ich –{" "}
-                  <strong className="text-[#0a0a0a]">Jens, aus Ratingen</strong>.
-                </p>
-                <p>
-                  Ich baue in meiner Freizeit Tools, die mir selbst fehlen – oder die einfach Spaß machen
-                  zu bauen. Mein Werkzeug der Wahl: Claude AI, Next.js und ein gutes Gespür dafür, wann
-                  etwas fertig genug ist.
-                </p>
-                <p>
-                  Ratinga AI ist kein Startup und keine Agentur. Es ist ein laufendes Experiment: Was lässt
-                  sich mit modernen Tools und KI-gestütztem Development alleine – oder in loser
-                  Kollaboration mit Gleichgesinnten – auf die Beine stellen?
-                </p>
-                <p className="text-[#0a0a0a] font-bold">Spoiler: Ziemlich viel.</p>
+              <div className="flex flex-col md:flex-row gap-12 items-start">
+                <div className="flex-shrink-0">
+                  <Image
+                    src="/jens.jpg"
+                    alt="Jens Gildehaus"
+                    width={200}
+                    height={200}
+                    className="w-40 h-40 rounded-2xl object-cover object-top"
+                  />
+                </div>
+                <div className="space-y-5 text-gray-600 text-lg leading-relaxed">
+                  <p>
+                    Hinter Ratinga AI stecke ich –{" "}
+                    <strong className="text-[#0a0a0a]">Jens, aus Ratingen</strong>.
+                  </p>
+                  <p>
+                    Ich baue in meiner Freizeit Tools, die mir selbst fehlen – oder die einfach Spaß machen
+                    zu bauen. Mein Werkzeug der Wahl: Claude AI, Next.js und ein gutes Gespür dafür, wann
+                    etwas fertig genug ist.
+                  </p>
+                  <p>
+                    Ratinga AI ist kein Startup und keine Agentur. Es ist ein laufendes Experiment: Was lässt
+                    sich mit modernen Tools und KI-gestütztem Development alleine – oder in loser
+                    Kollaboration mit Gleichgesinnten – auf die Beine stellen?
+                  </p>
+                  <p className="text-[#0a0a0a] font-bold">Spoiler: Ziemlich viel.</p>
+                </div>
               </div>
             </FadeUp>
           </div>
