@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { MeshGradientBg } from "@/components/ui/mesh-gradient";
+import { LiquidButton } from "@/components/ui/liquid-button";
 
 // ─── Animation helper ───────────────────────────────────────────────────────
 
@@ -157,9 +157,15 @@ export default function Home() {
 
         {/* ── HERO ────────────────────────────────────────────────────────── */}
         <section className="relative pt-52 pb-28 px-6 overflow-hidden">
-          <div className="absolute inset-0">
-            <MeshGradientBg />
-          </div>
+          {/* Subtiler CSS-Gradient — kein npm-Paket, kein WebGL, lädt sofort */}
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "radial-gradient(ellipse 90% 55% at 50% -5%, rgba(209,43,43,0.07) 0%, transparent 65%)," +
+                "radial-gradient(ellipse 70% 40% at 85% 90%, rgba(27,88,168,0.06) 0%, transparent 60%)",
+            }}
+          />
           <div className="relative z-10 max-w-4xl mx-auto">
             <motion.h1
               className="text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.08] mb-6"
@@ -188,12 +194,9 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.28, ease: [0.25, 0.1, 0.25, 1] }}
             >
-              <a
-                href="#showcase"
-                className="inline-flex items-center gap-2 bg-[#0a0a0a] text-white px-8 py-4 rounded-full text-sm font-semibold hover:bg-[#D12B2B] transition-colors duration-300"
-              >
+              <LiquidButton href="#showcase">
                 Projekte entdecken <span className="text-base">↓</span>
-              </a>
+              </LiquidButton>
             </motion.div>
 
             {/* Trust badges */}
