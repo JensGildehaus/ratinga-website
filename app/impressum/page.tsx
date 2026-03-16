@@ -21,13 +21,17 @@ export default function Impressum() {
 
         <section>
           <h2 className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-3">
-            Angaben gemäß § 5 TMG
+            Angaben gemäß § 5 DDG
           </h2>
           <p className="text-gray-700 leading-relaxed">
             Ratinga AI<br />
             Jens Gildehaus<br />
             Schleiferstr. 6<br />
-            40878 Ratingen
+            40878 Ratingen<br />
+            Website:{" "}
+            <a href="https://ratinga.de" className="text-[#1B58A8] hover:underline">
+              ratinga.de
+            </a>
           </p>
         </section>
 
@@ -58,8 +62,8 @@ export default function Impressum() {
             Haftung für Inhalte
           </h2>
           <p className="text-gray-600 leading-relaxed text-sm">
-            Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten nach den
-            allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht
+            Als Diensteanbieter sind wir gemäß § 7 Abs. 1 DDG für eigene Inhalte auf diesen Seiten nach den
+            allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 DDG sind wir als Diensteanbieter jedoch nicht
             verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen
             zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
           </p>
