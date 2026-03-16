@@ -29,9 +29,10 @@
 
 ## Kontaktformular / E-Mail-Routing
 - Felder: Name, E-Mail, Nachricht + Honeypot
-- API Route → Resend → **`jens@jensgildehaus.de`** (direkt, kein Strato-Umweg)
-- `from`: `noreply@ratinga.de` (nach DKIM-Setup), `replyTo`: E-Mail des Absenders
-- `kontakt@ratinga.de` wird direkt per **IMAP/SMTP über Strato** abgerufen (imap.strato.de / smtp.strato.de) — keine Weiterleitung
+- API Route → **Nodemailer → Strato SMTP** → `kontakt@ratinga.de`
+- Kein Resend. SMTP: `smtp.strato.de:465`, Auth via Env-Vars `STRATO_EMAIL` + `STRATO_PASSWORD`
+- `replyTo`: E-Mail des Absenders — Antworten gehen direkt an den Nutzer
+- Abruf: IMAP `imap.strato.de:993` im Mail-Client
 - Keine Auto-Reply an den Absender
 
 ## Offene Punkte

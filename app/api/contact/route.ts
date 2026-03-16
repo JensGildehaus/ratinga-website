@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { Resend } from "resend";
+import nodemailer from "nodemailer";
 
 export async function POST(req: NextRequest) {
   const { name, email, message } = await req.json();
@@ -9,14 +9,24 @@ export async function POST(req: NextRequest) {
   }
 
   try {
-    const resend = new Resend(process.env.RESEND_API_KEY);
-    await resend.emails.send({
-      from: "Ratinga AI <onboarding@resend.dev>",
-      to: "jens@jensgildehaus.de",
+    const transporter = nodemailer.createTransport({
+      host: "smtp.strato.de",
+      port: 465,
+      secure: true,
+      auth: {
+        user: process.env.STRATO_EMAIL,
+        pass: process.env.STRATO_PASSWORD,
+      },
+    });
+
+    await transporter.sendMail({
+      from: `"Ratinga AI Website" <${process.env.STRATO_EMAIL}>`,
+      to: process.env.STRATO_EMAIL,
       replyTo: email,
       subject: `Neue Kontaktanfrage von ${name}`,
       text: `Von: ${name} <${email}>\n\n${message}`,
     });
+
     return NextResponse.json({ ok: true });
   } catch (error) {
     console.error(error);
