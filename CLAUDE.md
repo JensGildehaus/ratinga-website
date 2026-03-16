@@ -1,6 +1,6 @@
 # Ratinga Website — ratinga.de
 
-> **[RATINGA WEBSITE]** · Status: **Live** · Stack: Next.js 15 · TS · Tailwind · Framer Motion · Resend · Vercel
+> **[RATINGA WEBSITE]** · Status: **Live** · Stack: Next.js 15 · TS · Tailwind · Framer Motion · Nodemailer · Vercel
 > Relevant: ratinga.de Design/Code/Texte/Recht · Nicht relevant: Ablesewilli-Code, Server, Brainstorming
 
 ## Kurzreferenz
@@ -13,29 +13,30 @@
 | **Rechtsstatus** | Kleinunternehmer / Einzelperson |
 
 ## Seitenstruktur
-- `/` — Hero · Showcase (Ablesewilli) · Stack · About · Netzwerk · FAQ · Kontakt
+- `/` — Hero · Showcase (ablesewilli + Stack) · Über mich · Netzwerk · FAQ · Kontakt
 - `/impressum` · `/datenschutz` — fertig, DSGVO-konform
+- Sektionen alternieren: Hero(w) · Showcase(g) · Über mich(w) · Netzwerk(g) · FAQ(w) · Kontakt(g)
 
 ## Design-Regeln (aktueller Stand)
-- **Stil:** Apple-clean, reines Weiß, keine Hintergrundeffekte (kein Shader, kein Gradient)
-- **Logo:** `public/finales Logo.png` · `h-[50px]` in der Nav
-- **Foto:** `public/jens.jpg` in der About-Sektion
+- **Claim:** `built with AI. made to work.` — immer lowercase, "AI." in Rot #D12B2B
+- **Stil:** Apple-clean, reines Weiß, keine Hintergrundeffekte
+- **Logo:** `public/finales Logo.png` · `h-[50px]` · Link zur Startseite
+- **Favicon:** `app/icon.png` (Löwenkopf, aus Logo extrahiert)
+- **Foto:** `public/jens.jpg` in Über-mich-Sektion
 - **Farben:** Rot `#D12B2B` + Blau `#1B58A8` — sparsam als Akzente
 - **Fonts:** Plus Jakarta Sans (Headings) · Geist (Body)
-- **Trust-Badges:** Kein Emoji — nur Text
-- **Netzwerk-Karte:** Weiß mit grauem Border (nicht schwarz)
-- **Name:** Immer **Ratinga AI** — nie nur "Ratinga"
-- Keine generischen AI-Aesthetics, kein Marketingsprech
+- **Produktname:** immer **ablesewilli** — klein, zusammen, kein Bindestrich
+- **Markenname:** immer **Ratinga AI** — nie nur "Ratinga"
+- Trust-Badges ohne Emoji · Netzwerk-Karte weiß mit Border
+- Mobile: Hamburger-Menü (Framer Motion Slide-down)
 
 ## Kontaktformular / E-Mail-Routing
-- Felder: Name, E-Mail, Nachricht + Honeypot
 - API Route → **Nodemailer → Strato SMTP** → `kontakt@ratinga.de`
-- Kein Resend. SMTP: `smtp.strato.de:465`, Auth via Env-Vars `STRATO_EMAIL` + `STRATO_PASSWORD`
-- `replyTo`: E-Mail des Absenders — Antworten gehen direkt an den Nutzer
-- Abruf: IMAP `imap.strato.de:993` im Mail-Client
-- Keine Auto-Reply an den Absender
+- SMTP: `smtp.strato.de:465` · Env-Vars: `STRATO_EMAIL` + `STRATO_PASSWORD` (in Vercel gesetzt)
+- `replyTo`: E-Mail des Absenders
+- Abruf: IMAP `imap.strato.de:993` — auf Jens' Handy eingerichtet
+- Kein Resend, keine Auto-Reply
 
 ## Offene Punkte
-- [ ] Resend: DKIM für ratinga.de einrichten
 - [ ] OG-Image anlegen
 - [ ] `/seo-audit` nach Launch
