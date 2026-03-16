@@ -238,9 +238,9 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
             >
-              Built with <span className="text-[#D12B2B]">AI.</span>
+              built with <span className="text-[#D12B2B]">AI.</span>
               <br />
-              Made to work.
+              made to work.
             </motion.h1>
 
             <motion.p
