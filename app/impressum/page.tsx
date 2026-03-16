@@ -17,7 +17,7 @@ export default function Impressum() {
       </header>
 
       <main className="max-w-2xl mx-auto px-6 py-16 space-y-10">
-        <h1 className="text-4xl font-semibold tracking-tight">Impressum</h1>
+        <h1 className="text-2xl md:text-4xl font-semibold tracking-tight">Impressum</h1>
 
         <section>
           <h2 className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-3">
