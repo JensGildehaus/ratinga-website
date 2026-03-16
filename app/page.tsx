@@ -328,14 +328,14 @@ export default function Home() {
               <h2 className="text-3xl font-bold tracking-tight mb-10">Über Ratinga AI</h2>
             </FadeUp>
             <FadeUp delay={0.1}>
-              <div className="flex flex-col md:flex-row gap-12 items-start">
+              <div className="flex flex-col md:flex-row gap-12 items-center">
                 <div className="flex-shrink-0">
                   <Image
                     src="/jens.jpg"
                     alt="Jens Gildehaus"
                     width={200}
                     height={200}
-                    className="w-40 h-40 rounded-2xl object-cover object-top"
+                    className="w-40 h-40 rounded-2xl object-cover object-center"
                   />
                 </div>
                 <div className="space-y-5 text-gray-600 text-lg leading-relaxed">
