@@ -31,7 +31,7 @@
 - Felder: Name, E-Mail, Nachricht + Honeypot
 - API Route → Resend → **`jens@jensgildehaus.de`** (direkt, kein Strato-Umweg)
 - `from`: `noreply@ratinga.de` (nach DKIM-Setup), `replyTo`: E-Mail des Absenders
-- `kontakt@ratinga.de` bleibt nur öffentliche Schauadresse im Impressum
+- `kontakt@ratinga.de` wird direkt per **IMAP/SMTP über Strato** abgerufen (imap.strato.de / smtp.strato.de) — keine Weiterleitung
 - Keine Auto-Reply an den Absender
 
 ## Offene Punkte
