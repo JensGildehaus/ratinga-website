@@ -127,7 +127,8 @@ function MobileNav() {
 
         {/* Mobile burger */}
         <button
-          className="sm:hidden flex flex-col gap-1.5 p-2 -mr-2"
+          type="button"
+          className="sm:hidden flex flex-col gap-1.5 p-3 -mr-2 cursor-pointer"
           onClick={() => setOpen(!open)}
           aria-label="Menü"
           aria-expanded={open}
@@ -292,7 +293,7 @@ export default function Home() {
             <div className="flex flex-col md:flex-row items-center gap-16">
               <FadeUp className="flex-1">
                 <p className="text-xs font-bold uppercase tracking-widest text-[#1B58A8] mb-4">
-                  Aktuell live
+                  Aktuell (in Arbeit)
                 </p>
                 <h2 className="text-3xl font-bold tracking-tight mb-4">
                   Ablese-Willi
