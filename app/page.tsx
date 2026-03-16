@@ -101,10 +101,10 @@ const stackRows = [
 ];
 
 const trustBadges = [
-  { icon: "🔒", label: "DSGVO-konform" },
-  { icon: "🚫", label: "Keine Cookies" },
-  { icon: "☁️", label: "EU-Server" },
-  { icon: "💸", label: "Kostenlos" },
+  { label: "DSGVO-konform" },
+  { label: "Keine Cookies" },
+  { label: "EU-Server" },
+  { label: "Kostenlos" },
 ];
 
 // ─── Page ────────────────────────────────────────────────────────────────────
@@ -175,7 +175,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.15, ease: [0.25, 0.1, 0.25, 1] }}
             >
-              Ratinga baut Web-Apps, Automations und Open-Source-Projekte –
+              Ratinga AI baut Web-Apps, Automations und Open-Source-Projekte –
               modern, schlank und mit KI im Gepäck.
             </motion.p>
 
@@ -204,7 +204,7 @@ export default function Home() {
                   key={b.label}
                   className="inline-flex items-center gap-1.5 bg-[#F5F5F7] text-gray-600 text-xs font-medium px-3 py-1.5 rounded-full"
                 >
-                  {b.icon} {b.label}
+                  {b.label}
                 </span>
               ))}
             </motion.div>
@@ -324,12 +324,12 @@ export default function Home() {
         <section id="about" className="py-24 px-6 bg-[#F5F5F7]">
           <div className="max-w-4xl mx-auto">
             <FadeUp>
-              <h2 className="text-3xl font-bold tracking-tight mb-10">Über Ratinga</h2>
+              <h2 className="text-3xl font-bold tracking-tight mb-10">Über Ratinga AI</h2>
             </FadeUp>
             <FadeUp delay={0.1}>
               <div className="max-w-2xl space-y-5 text-gray-600 text-lg leading-relaxed">
                 <p>
-                  Hinter Ratinga stecke ich –{" "}
+                  Hinter Ratinga AI stecke ich –{" "}
                   <strong className="text-[#0a0a0a]">Jens, aus Ratingen</strong>.
                 </p>
                 <p>
@@ -338,7 +338,7 @@ export default function Home() {
                   etwas fertig genug ist.
                 </p>
                 <p>
-                  Ratinga ist kein Startup und keine Agentur. Es ist ein laufendes Experiment: Was lässt
+                  Ratinga AI ist kein Startup und keine Agentur. Es ist ein laufendes Experiment: Was lässt
                   sich mit modernen Tools und KI-gestütztem Development alleine – oder in loser
                   Kollaboration mit Gleichgesinnten – auf die Beine stellen?
                 </p>
@@ -352,13 +352,13 @@ export default function Home() {
         <section className="py-24 px-6">
           <div className="max-w-4xl mx-auto">
             <FadeUp>
-              <div className="p-10 rounded-2xl bg-[#0a0a0a] text-white">
+              <div className="p-10 rounded-2xl border border-gray-100 bg-white">
                 <h2 className="text-2xl font-bold mb-3">Netzwerk</h2>
-                <p className="text-gray-400 leading-relaxed mb-6 max-w-xl">
-                  Ratinga arbeitet gelegentlich mit anderen unabhängigen Entwicklern und Machern zusammen –
+                <p className="text-gray-500 leading-relaxed mb-6 max-w-xl">
+                  Ratinga AI arbeitet gelegentlich mit anderen unabhängigen Entwicklern und Machern zusammen –
                   lose, projektbasiert, auf Augenhöhe.
                 </p>
-                <p className="text-gray-400">
+                <p className="text-gray-500">
                   Du baust ähnliche Dinge? Meld dich gern.
                 </p>
               </div>
@@ -466,7 +466,7 @@ export default function Home() {
       {/* ── FOOTER ──────────────────────────────────────────────────────── */}
       <footer className="py-10 px-6 border-t border-gray-100">
         <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-400">
-          <span>Ratinga – Built with AI. Made to work.</span>
+          <span>Ratinga AI – Built with AI. Made to work.</span>
           <div className="flex gap-6">
             <Link href="/impressum" className="hover:text-[#0a0a0a] transition-colors">Impressum</Link>
             <Link href="/datenschutz" className="hover:text-[#0a0a0a] transition-colors">Datenschutz</Link>
