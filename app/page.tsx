@@ -59,7 +59,7 @@ export default function Home() {
       {/* NAV */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
         <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
-          <Image src="/logo.png" alt="Ratinga" width={140} height={36} className="h-9 w-auto" priority />
+          <Image src="/logo.png" alt="Ratinga" width={240} height={60} className="h-14 w-auto" priority />
           <nav className="hidden sm:flex items-center gap-8 text-sm text-gray-500">
             <a href="#projekte" className="hover:text-[#0a0a0a] transition-colors">Projekte</a>
             <a href="#stack" className="hover:text-[#0a0a0a] transition-colors">Stack</a>
