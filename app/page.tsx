@@ -134,13 +134,13 @@ export default function Home() {
 
       {/* ── NAV ─────────────────────────────────────────────────────────── */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
-        <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+        <div className="max-w-5xl mx-auto px-6 h-20 flex items-center justify-between">
           <Image
             src="/logo.png"
             alt="Ratinga"
-            width={240}
-            height={60}
-            className="h-14 w-auto"
+            width={300}
+            height={80}
+            className="h-16 w-auto"
             priority
           />
           <nav className="hidden sm:flex items-center gap-8 text-sm font-medium text-gray-500">
@@ -155,7 +155,7 @@ export default function Home() {
       <main>
 
         {/* ── HERO ────────────────────────────────────────────────────────── */}
-        <section className="pt-44 pb-24 px-6">
+        <section className="pt-48 pb-24 px-6">
           <div className="max-w-4xl mx-auto">
             <motion.h1
               className="text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.08] mb-6"
@@ -180,7 +180,6 @@ export default function Home() {
             </motion.p>
 
             <motion.div
-              className="flex flex-wrap items-center gap-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.28, ease: [0.25, 0.1, 0.25, 1] }}
@@ -190,12 +189,6 @@ export default function Home() {
                 className="inline-flex items-center gap-2 bg-[#0a0a0a] text-white px-8 py-4 rounded-full text-sm font-semibold hover:bg-[#D12B2B] transition-colors duration-300"
               >
                 Projekte entdecken <span className="text-base">↓</span>
-              </a>
-              <a
-                href="#kontakt"
-                className="inline-flex items-center gap-2 border border-gray-200 text-gray-600 px-8 py-4 rounded-full text-sm font-semibold hover:border-gray-400 hover:text-[#0a0a0a] transition-colors duration-300"
-              >
-                Kontakt aufnehmen
               </a>
             </motion.div>
 
@@ -215,6 +208,84 @@ export default function Home() {
                 </span>
               ))}
             </motion.div>
+          </div>
+        </section>
+
+        {/* ── PRODUCT SHOWCASE ────────────────────────────────────────────── */}
+        <section className="py-24 px-6 bg-[#F5F5F7] overflow-hidden">
+          <div className="max-w-4xl mx-auto">
+            <div className="flex flex-col md:flex-row items-center gap-16">
+              <FadeUp className="flex-1">
+                <p className="text-xs font-bold uppercase tracking-widest text-[#1B58A8] mb-4">
+                  Aktuell live
+                </p>
+                <h2 className="text-3xl font-bold tracking-tight mb-4">
+                  Ablese-Willi
+                </h2>
+                <p className="text-gray-500 leading-relaxed mb-6">
+                  Strom, Gas und Wasser — monatlich ablesen, Kosten im Blick
+                  behalten, Jahresabrechnung verstehen. Kostenlos, werbefrei,
+                  ohne Account-Pflicht bei Dritten.
+                </p>
+                <a
+                  href="https://ablesewilli.de"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-[#1B58A8] hover:underline"
+                >
+                  ablesewilli.de →
+                </a>
+              </FadeUp>
+
+              {/* Phone mockup */}
+              <FadeUp delay={0.15} className="flex-shrink-0">
+                <motion.div
+                  className="relative"
+                  initial={{ rotate: 2 }}
+                  whileInView={{ rotate: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
+                >
+                  {/* Phone frame */}
+                  <div className="w-56 bg-[#0a0a0a] rounded-[44px] p-2.5 shadow-2xl shadow-black/30">
+                    {/* Screen */}
+                    <div className="bg-white rounded-[36px] overflow-hidden">
+                      {/* Header */}
+                      <div className="bg-[#1B58A8] px-5 pt-8 pb-5 text-white">
+                        <p className="text-[10px] opacity-60 font-medium mb-0.5">Ablesewilli</p>
+                        <p className="text-lg font-bold">März 2026</p>
+                        <p className="text-[10px] opacity-60 mt-1">Haushalt · 2 Personen</p>
+                      </div>
+                      {/* Meter cards */}
+                      <div className="p-3 space-y-2 bg-[#F5F5F7]">
+                        {[
+                          { icon: "⚡", label: "Strom", value: "234 kWh", sub: "↓ 12% vs. Vormonat", color: "#D12B2B" },
+                          { icon: "🔥", label: "Gas", value: "89 m³", sub: "↑ 3% vs. Vormonat", color: "#1B58A8" },
+                          { icon: "💧", label: "Wasser", value: "3,4 m³", sub: "= Vormonat", color: "#0891b2" },
+                        ].map((item) => (
+                          <div key={item.label} className="flex items-center gap-2.5 p-2.5 bg-white rounded-xl shadow-sm">
+                            <span className="text-lg">{item.icon}</span>
+                            <div className="flex-1 min-w-0">
+                              <p className="text-[10px] text-gray-400 font-medium">{item.label}</p>
+                              <p className="text-sm font-bold" style={{ color: item.color }}>{item.value}</p>
+                              <p className="text-[9px] text-gray-400">{item.sub}</p>
+                            </div>
+                          </div>
+                        ))}
+                        {/* CTA button */}
+                        <div className="pt-1 pb-2">
+                          <div className="w-full bg-[#1B58A8] rounded-xl py-2 text-center">
+                            <p className="text-[10px] font-bold text-white">+ Ablesung eintragen</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  {/* Glow */}
+                  <div className="absolute -inset-4 bg-[#1B58A8]/10 rounded-[60px] blur-2xl -z-10" />
+                </motion.div>
+              </FadeUp>
+            </div>
           </div>
         </section>
 
