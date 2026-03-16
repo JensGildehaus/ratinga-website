@@ -396,8 +396,7 @@ export default function Home() {
                 </div>
                 <div className="space-y-5 text-gray-600 text-lg leading-relaxed">
                   <p>
-                    Hinter Ratinga AI stecke ich –{" "}
-                    <strong className="text-[#0a0a0a]">Jens, aus Ratingen</strong>.
+                    Hinter Ratinga AI stecke ich – Jens, aus Ratingen.
                   </p>
                   <p>
                     Ich baue in meiner Freizeit Tools, die mir selbst fehlen – oder die einfach Spaß machen
