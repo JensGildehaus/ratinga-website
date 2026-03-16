@@ -295,7 +295,7 @@ export default function Home() {
                   Aktuell (in Arbeit)
                 </p>
                 <h2 className="text-3xl font-bold tracking-tight mb-4">
-                  Ablese-Willi
+                  ablesewilli
                 </h2>
                 <p className="text-gray-500 leading-relaxed mb-6">
                   Strom, Gas und Wasser — monatlich ablesen, Kosten im Blick
@@ -378,7 +378,7 @@ export default function Home() {
         </section>
 
         {/* ── ABOUT ───────────────────────────────────────────────────────── */}
-        <section id="about" className="py-24 px-6 bg-[#F5F5F7]">
+        <section id="about" className="py-24 px-6">
           <div className="max-w-4xl mx-auto">
             <FadeUp>
               <h2 className="text-3xl font-bold tracking-tight mb-10">Über Ratinga AI</h2>
@@ -418,10 +418,10 @@ export default function Home() {
         </section>
 
         {/* ── NETZWERK ────────────────────────────────────────────────────── */}
-        <section className="py-24 px-6">
+        <section className="py-24 px-6 bg-[#F5F5F7]">
           <div className="max-w-4xl mx-auto">
             <FadeUp>
-              <div className="p-10 rounded-2xl border border-gray-100 bg-white">
+              <div className="p-10 rounded-2xl border border-gray-200 bg-white">
                 <h2 className="text-2xl font-bold mb-3">Netzwerk</h2>
                 <p className="text-gray-500 leading-relaxed mb-6 max-w-xl">
                   Ratinga AI arbeitet gelegentlich mit anderen unabhängigen Entwicklern und Machern zusammen –
@@ -436,7 +436,7 @@ export default function Home() {
         </section>
 
         {/* ── FAQ ─────────────────────────────────────────────────────────── */}
-        <section className="py-24 px-6 bg-[#F5F5F7]">
+        <section className="py-24 px-6">
           <div className="max-w-4xl mx-auto">
             <FadeUp>
               <h2 className="text-3xl font-bold tracking-tight mb-3">Häufige Fragen</h2>
