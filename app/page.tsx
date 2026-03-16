@@ -146,7 +146,7 @@ export default function Home() {
           <nav className="hidden sm:flex items-center gap-8 text-sm font-medium text-gray-500">
             <a href="#projekte" className="hover:text-[#0a0a0a] transition-colors">Projekte</a>
             <a href="#stack" className="hover:text-[#0a0a0a] transition-colors">Stack</a>
-            <a href="#about" className="hover:text-[#0a0a0a] transition-colors">Über uns</a>
+            <a href="#about" className="hover:text-[#0a0a0a] transition-colors">Über mich</a>
             <a href="#kontakt" className="hover:text-[#0a0a0a] transition-colors">Kontakt</a>
           </nav>
         </div>
