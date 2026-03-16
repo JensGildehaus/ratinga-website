@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { MeshGradientBg } from "@/components/ui/mesh-gradient";
 
 // ─── Animation helper ───────────────────────────────────────────────────────
 
@@ -155,8 +156,11 @@ export default function Home() {
       <main>
 
         {/* ── HERO ────────────────────────────────────────────────────────── */}
-        <section className="pt-48 pb-24 px-6">
-          <div className="max-w-4xl mx-auto">
+        <section className="relative pt-48 pb-24 px-6 overflow-hidden">
+          <div className="absolute inset-0">
+            <MeshGradientBg />
+          </div>
+          <div className="relative z-10 max-w-4xl mx-auto">
             <motion.h1
               className="text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.08] mb-6"
               style={{ fontFamily: "var(--font-jakarta)" }}
@@ -398,11 +402,8 @@ export default function Home() {
                   Ratinga arbeitet gelegentlich mit anderen unabhängigen Entwicklern und Machern zusammen –
                   lose, projektbasiert, auf Augenhöhe.
                 </p>
-                <p className="text-white">
-                  Du baust ähnliche Dinge? Meld dich gern.{" "}
-                  <a href="#kontakt" className="text-[#6B9FE4] hover:text-white transition-colors font-semibold">
-                    → zum Kontaktformular
-                  </a>
+                <p className="text-gray-400">
+                  Du baust ähnliche Dinge? Meld dich gern.
                 </p>
               </div>
             </FadeUp>
@@ -518,16 +519,10 @@ export default function Home() {
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <a
-                  href="#kontakt"
-                  className="inline-flex items-center gap-2 bg-[#D12B2B] text-white px-8 py-4 rounded-full text-sm font-semibold hover:bg-red-700 transition-colors duration-300"
-                >
-                  Kontakt aufnehmen
-                </a>
-                <a
                   href="https://ablesewilli.de"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 border border-white/20 text-white px-8 py-4 rounded-full text-sm font-semibold hover:border-white/60 transition-colors duration-300"
+                  className="inline-flex items-center gap-2 bg-[#D12B2B] text-white px-8 py-4 rounded-full text-sm font-semibold hover:bg-red-700 transition-colors duration-300"
                 >
                   Ablesewilli testen →
                 </a>
