@@ -27,9 +27,11 @@
 - **Name:** Immer **Ratinga AI** — nie nur "Ratinga"
 - Keine generischen AI-Aesthetics, kein Marketingsprech
 
-## Kontaktformular
+## Kontaktformular / E-Mail-Routing
 - Felder: Name, E-Mail, Nachricht + Honeypot
-- API Route → Resend → kontakt@ratinga.de
+- API Route → Resend → `kontakt@ratinga.de`
+- **Keine Auto-Reply** an den Absender (bewusste Entscheidung)
+- Absender: `noreply@ratinga.de` (nach DKIM-Setup)
 
 ## Offene Punkte
 - [ ] Resend: DKIM für ratinga.de einrichten
