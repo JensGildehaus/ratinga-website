@@ -335,7 +335,7 @@ export default function Home() {
                     alt="Jens Gildehaus"
                     width={200}
                     height={200}
-                    className="w-40 h-40 rounded-2xl object-cover object-center"
+                    className="w-40 h-40 rounded-2xl object-cover object-[center_15%]"
                   />
                 </div>
                 <div className="space-y-5 text-gray-600 text-lg leading-relaxed">
