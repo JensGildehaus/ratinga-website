@@ -33,7 +33,7 @@ function FadeUp({
 
 const faqs = [
   {
-    q: "Was ist Ratinga genau?",
+    q: "Was ist Ratinga AI genau?",
     a: "Ein laufendes Experiment: Kann eine Privatperson mit modernen Tools und KI-gestütztem Development Produkte bauen, die sich anfühlen wie von einem ganzen Team? Bisher: ja.",
   },
   {
@@ -175,7 +175,8 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.15, ease: [0.25, 0.1, 0.25, 1] }}
             >
-              Ratinga AI baut Web-Apps, Automations und Open-Source-Projekte –
+              Ratinga AI baut Web-Apps, Automations und{" "}
+              <span className="whitespace-nowrap">Open-Source-Projekte</span> –
               modern, schlank und mit KI im Gepäck.
             </motion.p>
 
