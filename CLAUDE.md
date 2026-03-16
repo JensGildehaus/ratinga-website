@@ -29,9 +29,10 @@
 
 ## Kontaktformular / E-Mail-Routing
 - Felder: Name, E-Mail, Nachricht + Honeypot
-- API Route → Resend → `kontakt@ratinga.de`
-- **Keine Auto-Reply** an den Absender (bewusste Entscheidung)
-- Absender: `noreply@ratinga.de` (nach DKIM-Setup)
+- API Route → Resend → **`jens@jensgildehaus.de`** (direkt, kein Strato-Umweg)
+- `from`: `noreply@ratinga.de` (nach DKIM-Setup), `replyTo`: E-Mail des Absenders
+- `kontakt@ratinga.de` bleibt nur öffentliche Schauadresse im Impressum
+- Keine Auto-Reply an den Absender
 
 ## Offene Punkte
 - [ ] Resend: DKIM für ratinga.de einrichten
