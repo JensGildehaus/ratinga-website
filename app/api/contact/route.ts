@@ -11,7 +11,7 @@ export async function POST(req: NextRequest) {
   try {
     const resend = new Resend(process.env.RESEND_API_KEY);
     await resend.emails.send({
-      from: "Ratinga AI <noreply@ratinga.de>",
+      from: "Ratinga AI <onboarding@resend.dev>",
       to: "jens@jensgildehaus.de",
       replyTo: email,
       subject: `Neue Kontaktanfrage von ${name}`,
