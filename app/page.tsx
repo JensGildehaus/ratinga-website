@@ -453,7 +453,7 @@ export default function Home() {
         </section>
 
         {/* ── KONTAKT ─────────────────────────────────────────────────────── */}
-        <section id="kontakt" className="py-24 px-6">
+        <section id="kontakt" className="py-24 px-6 bg-[#F5F5F7]">
           <div className="max-w-4xl mx-auto">
             <FadeUp>
               <h2 className="text-3xl font-bold tracking-tight mb-3">Kontakt</h2>
