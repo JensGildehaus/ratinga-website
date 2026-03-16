@@ -136,11 +136,11 @@ export default function Home() {
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
         <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
           <Image
-            src="/ratinga_ai_freigestellt_gross.png"
+            src="/finales Logo.png"
             alt="Ratinga AI"
             width={400}
             height={100}
-            className="h-60 w-auto"
+            className="h-[50px] w-auto"
             priority
           />
           <nav className="hidden sm:flex items-center gap-8 text-sm font-medium text-gray-500">
@@ -155,7 +155,7 @@ export default function Home() {
       <main>
 
         {/* ── HERO ────────────────────────────────────────────────────────── */}
-        <section className="relative pt-64 pb-28 px-6 overflow-hidden">
+        <section className="relative pt-40 pb-28 px-6 overflow-hidden">
           <div className="relative z-10 max-w-4xl mx-auto">
             <motion.h1
               className="text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.08] mb-6"
