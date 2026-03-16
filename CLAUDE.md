@@ -24,6 +24,7 @@ Corporate/Brand-Seite für **Ratinga AI** — die Firma hinter Ablesewilli und k
 - **Betreiber:** Jens Gildehaus, Schleiferstr. 6, 40878 Ratingen
 - **Domain:** `ratinga.de` (bei Strato registriert, seit 15.03.2026 aktiv)
 - **Kontakt-E-Mail:** `kontakt@ratinga.de`
+- **Telefon:** `+49 2102 1016974` (Festnetz, gemäß ISO 5008)
 - **Hosting:** Vercel
 - Kein eingetragenes Unternehmen (Kleinunternehmer / Einzelperson) — Impressum entsprechend einfach halten
 
