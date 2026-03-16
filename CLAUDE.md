@@ -28,7 +28,7 @@
 - **Produktname:** immer **ablesewilli** — klein, zusammen, kein Bindestrich
 - **Markenname:** immer **Ratinga AI** — nie nur "Ratinga"
 - Trust-Badges ohne Emoji · Netzwerk-Karte weiß mit Border
-- Mobile: Hamburger-Menü (Framer Motion Slide-down)
+- Mobile: Hamburger-Menü (Framer Motion Slide-down) — Dropdown als `fixed z-50`, Backdrop `z-40`
 
 ## Kontaktformular / E-Mail-Routing
 - API Route → **Nodemailer → Strato SMTP** → `kontakt@ratinga.de`
@@ -38,5 +38,5 @@
 - Kein Resend, keine Auto-Reply
 
 ## Offene Punkte
-- [ ] OG-Image anlegen
 - [ ] `/seo-audit` nach Launch
+- [ ] DKIM für `kontakt@ratinga.de` bei Strato (dann `from:` in `app/api/contact/route.ts` auf `noreply@ratinga.de` ändern)
