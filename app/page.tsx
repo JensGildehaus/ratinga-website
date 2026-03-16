@@ -102,83 +102,82 @@ const navLinks = [
 function MobileNav() {
   const [open, setOpen] = useState(false);
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
-      <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
-        <Link href="/">
-          <Image
-            src="/finales Logo.png"
-            alt="Ratinga AI"
-            width={400}
-            height={100}
-            className="h-[50px] w-auto"
-            priority
-          />
-        </Link>
+    <>
+      <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
+        <div className="max-w-5xl mx-auto px-6 h-[74px] flex items-center justify-between">
+          <Link href="/">
+            <Image
+              src="/finales Logo.png"
+              alt="Ratinga AI"
+              width={400}
+              height={100}
+              className="h-[50px] w-auto"
+              priority
+            />
+          </Link>
 
-        {/* Desktop nav */}
-        <nav className="hidden sm:flex items-center gap-8 text-sm font-medium text-gray-500">
-          {navLinks.map((l) => (
-            <a key={l.href} href={l.href} className="hover:text-[#0a0a0a] transition-colors">
-              {l.label}
-            </a>
-          ))}
-        </nav>
+          {/* Desktop nav */}
+          <nav className="hidden sm:flex items-center gap-8 text-sm font-medium text-gray-500">
+            {navLinks.map((l) => (
+              <a key={l.href} href={l.href} className="hover:text-[#0a0a0a] transition-colors">
+                {l.label}
+              </a>
+            ))}
+          </nav>
 
-        {/* Mobile burger */}
-        <button
-          type="button"
-          className="sm:hidden flex flex-col gap-1.5 p-3 -mr-2 cursor-pointer"
-          onClick={() => setOpen(!open)}
-          aria-label="Menü"
-          aria-expanded={open}
-        >
-          <motion.span
-            animate={open ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }}
-            transition={{ duration: 0.2 }}
-            className="block w-6 h-0.5 bg-[#0a0a0a] origin-center"
-          />
-          <motion.span
-            animate={open ? { opacity: 0 } : { opacity: 1 }}
-            transition={{ duration: 0.15 }}
-            className="block w-6 h-0.5 bg-[#0a0a0a]"
-          />
-          <motion.span
-            animate={open ? { rotate: -45, y: -8 } : { rotate: 0, y: 0 }}
-            transition={{ duration: 0.2 }}
-            className="block w-6 h-0.5 bg-[#0a0a0a] origin-center"
-          />
-        </button>
-      </div>
+          {/* Mobile burger */}
+          <button
+            type="button"
+            className="sm:hidden flex flex-col justify-center gap-1.5 w-11 h-11 -mr-1 cursor-pointer"
+            onClick={() => setOpen((v) => !v)}
+            aria-label="Menü"
+            aria-expanded={open}
+          >
+            <motion.span
+              animate={open ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }}
+              transition={{ duration: 0.2 }}
+              className="block w-6 h-0.5 bg-[#0a0a0a] origin-center"
+            />
+            <motion.span
+              animate={open ? { opacity: 0 } : { opacity: 1 }}
+              transition={{ duration: 0.15 }}
+              className="block w-6 h-0.5 bg-[#0a0a0a]"
+            />
+            <motion.span
+              animate={open ? { rotate: -45, y: -8 } : { rotate: 0, y: 0 }}
+              transition={{ duration: 0.2 }}
+              className="block w-6 h-0.5 bg-[#0a0a0a] origin-center"
+            />
+          </button>
+        </div>
+      </header>
 
-      {/* Mobile menu dropdown */}
+      {/* Mobile menu — außerhalb des Headers damit backdrop-blur nicht clippt */}
       <AnimatePresence>
         {open && (
           <motion.nav
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.25, ease: [0.25, 0.1, 0.25, 1] }}
-            className="sm:hidden overflow-hidden border-t border-gray-100 bg-white/95 backdrop-blur-md"
+            className="fixed top-[74px] left-0 right-0 z-50 sm:hidden bg-white border-b border-gray-100 shadow-lg"
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{ duration: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
           >
-            <div className="max-w-5xl mx-auto px-6 py-4 flex flex-col gap-1">
-              {navLinks.map((l, i) => (
-                <motion.a
+            <div className="max-w-5xl mx-auto px-6 py-3 flex flex-col">
+              {navLinks.map((l) => (
+                <a
                   key={l.href}
                   href={l.href}
                   onClick={() => setOpen(false)}
-                  initial={{ opacity: 0, x: -10 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: i * 0.05 }}
-                  className="py-3 text-lg font-medium text-[#0a0a0a] border-b border-gray-50 last:border-0 hover:text-[#D12B2B] transition-colors"
+                  className="py-4 text-lg font-medium text-[#0a0a0a] border-b border-gray-100 last:border-0 active:text-[#D12B2B]"
                 >
                   {l.label}
-                </motion.a>
+                </a>
               ))}
             </div>
           </motion.nav>
         )}
       </AnimatePresence>
-    </header>
+    </>
   );
 }
 
@@ -229,7 +228,7 @@ export default function Home() {
       <main>
 
         {/* ── HERO ────────────────────────────────────────────────────────── */}
-        <section className="relative pt-40 pb-28 px-6 overflow-hidden">
+        <section className="relative pt-36 pb-28 px-6 overflow-hidden">
           <div className="relative z-10 max-w-4xl mx-auto">
             <motion.h1
               className="text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.08] mb-6"
