@@ -186,7 +186,7 @@ function MobileNav() {
 const stackRows = [
   { label: "Frontend", value: "Next.js · TypeScript · Tailwind\u00a0·\u00a0shadcn/ui" },
   { label: "Daten & Backend", value: "Supabase · PostgreSQL" },
-  { label: "Hosting", value: "Vercel · EU-Server · DSGVO-konform" },
+  { label: "Hosting", value: "Vercel · EU\u2011Server · DSGVO\u2011konform" },
   { label: "AI", value: "Claude AI – Coding, Automations & Produktentwicklung" },
 ];
 
