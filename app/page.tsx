@@ -107,7 +107,7 @@ function MobileNav() {
         <div className="max-w-5xl mx-auto px-6 h-[74px] flex items-center justify-between">
           <Link href="/">
             <Image
-              src="/Logo%20Ratinga.png"
+              src="/logo.png"
               alt="Ratinga AI"
               width={400}
               height={100}
