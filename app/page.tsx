@@ -107,7 +107,7 @@ function MobileNav() {
         <div className="max-w-5xl mx-auto px-6 h-[74px] flex items-center justify-between">
           <Link href="/">
             <Image
-              src="/finales Logo.png"
+              src="/Logo Ratinga.png"
               alt="Ratinga AI"
               width={400}
               height={100}
@@ -184,7 +184,7 @@ function MobileNav() {
 // ─── Stack data ──────────────────────────────────────────────────────────────
 
 const stackRows = [
-  { label: "Frontend", value: "Next.js · TypeScript · Tailwind · shadcn/ui" },
+  { label: "Frontend", value: "Next.js · TypeScript · Tailwind\u00a0·\u00a0shadcn/ui" },
   { label: "Daten & Backend", value: "Supabase · PostgreSQL" },
   { label: "Hosting", value: "Vercel · EU-Server · DSGVO-konform" },
   { label: "AI", value: "Claude AI – Coding, Automations & Produktentwicklung" },
