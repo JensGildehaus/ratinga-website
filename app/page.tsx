@@ -107,7 +107,7 @@ function MobileNav() {
         <div className="max-w-5xl mx-auto px-6 h-[74px] flex items-center justify-between">
           <Link href="/">
             <Image
-              src="/Logo Ratinga.png"
+              src="/Logo%20Ratinga.png"
               alt="Ratinga AI"
               width={400}
               height={100}
@@ -190,12 +190,6 @@ const stackRows = [
   { label: "AI", value: "Claude AI – Coding, Automations & Produktentwicklung" },
 ];
 
-const trustBadges = [
-  { label: "DSGVO-konform" },
-  { label: "Keine Cookies" },
-  { label: "EU-Server" },
-  { label: "Kostenlos" },
-];
 
 // ─── Page ────────────────────────────────────────────────────────────────────
 
@@ -266,22 +260,6 @@ export default function Home() {
               </a>
             </motion.div>
 
-            {/* Trust badges */}
-            <motion.div
-              className="flex flex-wrap gap-3 mt-10"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.45 }}
-            >
-              {trustBadges.map((b) => (
-                <span
-                  key={b.label}
-                  className="inline-flex items-center gap-1.5 bg-[#F5F5F7] text-gray-600 text-xs font-medium px-3 py-1.5 rounded-full"
-                >
-                  {b.label}
-                </span>
-              ))}
-            </motion.div>
           </div>
         </section>
 
